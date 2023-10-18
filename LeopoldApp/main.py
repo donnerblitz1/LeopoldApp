@@ -1,4 +1,7 @@
 from kivy.app import App
+from kivy.lang import Builder
+from kivymd.app import MDApp
+
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
@@ -7,13 +10,16 @@ from kivy.core.audio import SoundLoader
 from kivy.uix.spinner import Spinner  
 from kivy.uix.gridlayout import GridLayout
 
-from kivy.lang import Builder
-from kivymd.app import MDApp
+
+
+
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.label import MDLabel
 from kivymd.uix.textfield import MDTextField
 from kivymd.uix.button import MDFlatButton, MDRaisedButton
 from kivymd.uix.spinner import MDSpinner
+
+
 from kivy.properties import StringProperty
 from kivy.clock import Clock
 
@@ -175,7 +181,7 @@ def hex_to_rgba(hex_color):
 
 class MyForm(MDBoxLayout):
     log_text = StringProperty("")
-
+    
     #label = Label(text="Hello, Kivy!", color=hex_to_rgba("#FF0000"))
     
 
@@ -463,6 +469,8 @@ class MyForm(MDBoxLayout):
 class MyApp(MDApp):  # Inherit from MDApp instead of App
 
     def build(self):
+
+        
         #form = MyForm()
         #initial_personality = form.voice_personality_input.text
         #initial_background_color = form.personality_background_colors.get(initial_personality, (0, 0, 0, 1))
